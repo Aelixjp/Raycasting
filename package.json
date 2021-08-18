@@ -1,0 +1,28 @@
+{
+  "name": "raycasting",
+  "version": "1.0.0",
+  "description": "A simple implementation of raycasting old technology...",
+  "main": "main.js",
+  "scripts": {
+    "start": "http-server -c-1 . -o -a 127.0.0.1 -p 8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aelixjp/Raycasting.git"
+  },
+  "keywords": [
+    "Raycasting",
+    "raycasting",
+    "3D",
+    "false3D"
+  ],
+  "author": "Brayan Steven Garcia Millan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aelixjp/Raycasting/issues"
+  },
+  "homepage": "https://github.com/Aelixjp/Raycasting#readme",
+  "dependencies": {
+    "http-server": "^13.0.0"
+  }
+}

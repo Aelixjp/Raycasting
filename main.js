@@ -8,18 +8,23 @@ window.onload = ()=>{
     const canvas = document.getElementById("canvas");
     const ctx    = canvas.getContext("2d");
 
-    const CWIDTH  = 0x500;
-    const CHEIGHT = 0x2d0;
+    const CWIDTH  = 0x320;
+    const CHEIGHT = 0x258;
 
     let board;
 
     function setup(){
         board = new Board(ctx, CWIDTH, CHEIGHT);
-        board.setup(new Vector(2, 2));
+        board.setup(new Vector(4, 4))
+        .then(()=>{
+            board.player.setupRays(1);
+            draw();
+        }).catch(e => console.error(e));
     }
 
     function draw(){
         board.drawBG();
+        board.renderMap();
         board.player.draw();
         board.player.drawCameraAngle();
         board.player.proyect();
@@ -29,6 +34,5 @@ window.onload = ()=>{
     }
 
     setup();
-    draw();
 
 }
